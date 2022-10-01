@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global css */
+:root {
+}
+
+* {
+	scroll-behaviour: smooth;
+}
+.box-shadow {
+	box-shadow: 5px 0px 20px rgba(105, 69, 69, 0.1);
+}
