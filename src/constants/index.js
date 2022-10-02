@@ -1,4 +1,4 @@
-const following = [
+export const following = [
 	{
 		id: 1,
 		name: "David White",
