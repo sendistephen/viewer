@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function SidebarLg() {
 	return (
-		<div className="h-screen w-60 bg-white border-r-2 border-gray-100 box-shadow overflow-auto scrollbar-hide">
+		<div className="hidden md:block h-screen w-60 bg-white border-r-2 border-gray-100 box-shadow overflow-auto scrollbar-hide">
 			<div className="px-6 pt-8">
 				<svg
 					className=""
@@ -201,7 +201,6 @@ function SidebarLg() {
 									className="h-6 w-6 rounded-full object-cover"
 									src="https://images.unsplash.com/photo-1630208232589-e42b29428b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.25&w=144&h=144&q=80"
 									alt="user1"
-									srcset=""
 								/>
 							</div>
 							<span className="text-zinc-700 text-sm tracking-wide font-normal">
@@ -216,7 +215,6 @@ function SidebarLg() {
 									className="h-6 w-6 rounded-full object-cover"
 									src="https://images.unsplash.com/photo-1633068587634-4280dabf12ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.25&w=144&h=144&q=80"
 									alt=""
-									srcset=""
 								/>
 							</span>
 							<span className="text-zinc-700 text-sm tracking-wide font-normal">
@@ -231,7 +229,6 @@ function SidebarLg() {
 									className="h-6 w-6 rounded-full object-cover"
 									src="https://images.unsplash.com/photo-1640590648703-71be813c879d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.25&w=144&h=144&q=80"
 									alt=""
-									srcset=""
 								/>
 							</span>
 							<span className="text-zinc-700 text-sm tracking-wide font-normal">
@@ -246,7 +243,6 @@ function SidebarLg() {
 									className="h-6 w-6 rounded-full object-cover"
 									src="https://images.unsplash.com/photo-1630631729332-d564de91400f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.25&w=144&h=144&q=80"
 									alt="user1"
-									srcset=""
 								/>
 							</span>
 							<span className="text-zinc-700 text-sm tracking-wide font-normal">
@@ -259,9 +255,15 @@ function SidebarLg() {
 				{/* Banner */}
 				<div className="mt-28 px-6">
 					<div className="bg-gray-100 px-2 border border-gray-200 py-5 rounded-xl">
-						<h2 className="text-zinc-900 font-semibold text-sm text-center mb-1">Get 3 months of premium service for free.</h2>
-						<p className="text-xs text-center text-gray-500 font-light mb-3">Take advantage of free and premium content and more.</p>
-						<button className="px-7 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">Get Premium</button>
+						<h2 className="text-zinc-900 font-semibold text-sm text-center mb-1">
+							Get 3 months of premium service for free.
+						</h2>
+						<p className="text-xs text-center text-gray-500 font-light mb-3">
+							Take advantage of free and premium content and more.
+						</p>
+						<button className="px-7 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">
+							Get Premium
+						</button>
 					</div>
 				</div>
 			</nav>
