@@ -324,7 +324,7 @@ function Sidebar() {
 							<p className="text-xs text-center text-gray-500 font-light mb-3">
 								Take advantage of free and premium content and more.
 							</p>
-							<button className="px-7 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">
+							<button className="px-7 py-3 text-sm bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">
 								Get Premium
 							</button>
 						</div>

@@ -12,7 +12,7 @@ function App() {
 					<Sidebar />
 					<SidebarSm />
 				</div>
-				<div className="flex-1 flex-col w-full max-w-[1340px] mx-auto px-16 sm:px-6">
+				<div className="flex-1 flex-col w-full max-w-[1340px] mx-auto sm:px-16 px-6 overflow-y-scroll">
 					<Navbar />
 					<div>
 						<Routes>
