@@ -8,15 +8,20 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="flex h-screen overflow-hidden">
-				<Sidebar />
-				<SidebarSm />
-				<Navbar />
-				<Routes>
-					{/*------ Content Area ------*/}
-
-					<Route path="/" element={<Home />} />
-					<Route path="/trending" element={<Trending />} />
-				</Routes>
+				<div>
+					<Sidebar />
+					<SidebarSm />
+				</div>
+				<div className="flex-1 flex-col w-full max-w-[1340px] mx-auto px-16 sm:px-6">
+					<Navbar />
+					<div>
+						<Routes>
+							{/*------ Content Area ------*/}
+							<Route path="/" element={<Home />} />
+							<Route path="/trending" element={<Trending />} />
+						</Routes>
+					</div>
+				</div>
 			</div>
 		</BrowserRouter>
 	);
