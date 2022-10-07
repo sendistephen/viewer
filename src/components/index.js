@@ -1,5 +1,5 @@
-import SmallSidebar from "./SmallSidebar";
-import SidebarLg from "./SidebarLg";
+import Sidebar from "./Sidebar";
+import SidebarSm from "./SmallSidebar";
 import Navbar from "./Navbar";
 import Trending from "./Trending";
 import Library from "./Library";
@@ -8,8 +8,8 @@ import Following from "./Following";
 import ForYou from "./ForYou";
 
 export {
-	SmallSidebar,
-	SidebarLg,
+	Sidebar,
+	SidebarSm,
 	Navbar,
 	Trending,
 	Library,

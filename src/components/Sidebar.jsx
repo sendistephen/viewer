@@ -1,27 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function SidebarLg() {
+function Sidebar() {
+	const [toggleMenu, setToggleMenu] = useState(true);
+
 	return (
-		<div className="hidden md:block h-screen w-60 bg-white border-r-2 border-gray-100 box-shadow overflow-auto scrollbar-hide">
-			<div className="px-6 pt-8">
-				<svg
-					className=""
-					width="99"
-					height="24"
-					fill="currentColor"
-					xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M35.93 5.433h-2.728l4.834 14.279h3.07l4.84-14.279h-2.735l-3.566 11.239h-.141L35.93 5.433ZM48.12 19.712h2.427V9.002H48.12v10.71Zm1.22-12.229c.771 0 1.402-.613 1.402-1.366 0-.76-.63-1.374-1.402-1.374-.777 0-1.408.614-1.408 1.374 0 .753.63 1.366 1.408 1.366ZM58.074 19.92c2.4 0 4.05-1.22 4.479-3.08l-2.267-.266c-.328.907-1.133 1.38-2.178 1.38-1.57 0-2.609-1.073-2.629-2.906h7.174v-.774c0-3.758-2.172-5.41-4.706-5.41-2.95 0-4.875 2.251-4.875 5.556 0 3.36 1.898 5.5 5.002 5.5Zm-2.588-6.574c.074-1.366 1.046-2.516 2.494-2.516 1.395 0 2.333 1.06 2.347 2.516h-4.841ZM67.248 19.712h2.535l1.93-7.237h.141l1.931 7.237h2.528l2.916-10.71h-2.48l-1.784 7.489h-.1l-1.85-7.488h-2.448l-1.85 7.53h-.094l-1.81-7.53h-2.474l2.91 10.709ZM85.678 19.92c2.4 0 4.05-1.22 4.48-3.08l-2.267-.266c-.329.907-1.133 1.38-2.179 1.38-1.569 0-2.608-1.073-2.628-2.906h7.174v-.774c0-3.758-2.173-5.41-4.707-5.41-2.95 0-4.874 2.251-4.874 5.556 0 3.36 1.897 5.5 5.001 5.5Zm-2.587-6.574c.073-1.366 1.045-2.516 2.494-2.516 1.394 0 2.333 1.06 2.346 2.516h-4.84ZM92.783 19.712h2.427v-6.296c0-1.36.986-2.322 2.32-2.322.409 0 .918.077 1.126.147V8.919a5.61 5.61 0 0 0-.872-.07c-1.18 0-2.165.698-2.54 1.939h-.108V9.003h-2.353v10.709ZM20.623 9.968a2.324 2.324 0 0 1 0 4.064l-17.036 9.65C1.993 24.585 0 23.456 0 21.651V2.349C0 .544 1.993-.585 3.587.318l17.036 9.65Z"
-						fill="#7B2CBF"
-					/>
-				</svg>
+		<div
+			className={`hidden sm:block h-screen ${
+				toggleMenu ? "w-60" : "w-[72px]"
+			} bg-white border-r-2 border-gray-100 box-shadow overflow-auto scrollbar-hide transition-all ease-in-out duration-500`}>
+			<div className="relative">
+				<div className="px-6 pt-8">
+					{toggleMenu ? (
+						<svg
+							className=""
+							width="99"
+							height="24"
+							fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M35.93 5.433h-2.728l4.834 14.279h3.07l4.84-14.279h-2.735l-3.566 11.239h-.141L35.93 5.433ZM48.12 19.712h2.427V9.002H48.12v10.71Zm1.22-12.229c.771 0 1.402-.613 1.402-1.366 0-.76-.63-1.374-1.402-1.374-.777 0-1.408.614-1.408 1.374 0 .753.63 1.366 1.408 1.366ZM58.074 19.92c2.4 0 4.05-1.22 4.479-3.08l-2.267-.266c-.328.907-1.133 1.38-2.178 1.38-1.57 0-2.609-1.073-2.629-2.906h7.174v-.774c0-3.758-2.172-5.41-4.706-5.41-2.95 0-4.875 2.251-4.875 5.556 0 3.36 1.898 5.5 5.002 5.5Zm-2.588-6.574c.074-1.366 1.046-2.516 2.494-2.516 1.395 0 2.333 1.06 2.347 2.516h-4.841ZM67.248 19.712h2.535l1.93-7.237h.141l1.931 7.237h2.528l2.916-10.71h-2.48l-1.784 7.489h-.1l-1.85-7.488h-2.448l-1.85 7.53h-.094l-1.81-7.53h-2.474l2.91 10.709ZM85.678 19.92c2.4 0 4.05-1.22 4.48-3.08l-2.267-.266c-.329.907-1.133 1.38-2.179 1.38-1.569 0-2.608-1.073-2.628-2.906h7.174v-.774c0-3.758-2.173-5.41-4.707-5.41-2.95 0-4.874 2.251-4.874 5.556 0 3.36 1.897 5.5 5.001 5.5Zm-2.587-6.574c.073-1.366 1.045-2.516 2.494-2.516 1.394 0 2.333 1.06 2.346 2.516h-4.84ZM92.783 19.712h2.427v-6.296c0-1.36.986-2.322 2.32-2.322.409 0 .918.077 1.126.147V8.919a5.61 5.61 0 0 0-.872-.07c-1.18 0-2.165.698-2.54 1.939h-.108V9.003h-2.353v10.709ZM20.623 9.968a2.324 2.324 0 0 1 0 4.064l-17.036 9.65C1.993 24.585 0 23.456 0 21.651V2.349C0 .544 1.993-.585 3.587.318l17.036 9.65Z"
+								fill="#7B2CBF"
+							/>
+						</svg>
+					) : (
+						<svg
+							className="h-7 w-6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M22.685 10.965a2.557 2.557 0 0 1 0 4.47L3.945 26.05C2.192 27.044 0 25.802 0 23.816V2.584C0 .598 2.192-.644 3.945.35l18.74 10.615Z"
+								fill="#7B2CBF"
+							/>
+						</svg>
+					)}
+				</div>
+
+				<button
+					onClick={() => setToggleMenu(!toggleMenu)}
+					className="absolute top-2 right-0">
+					<span className="sr-only">Expand / collapse sidebar</span>
+					<svg
+						className={`w-6 h-4 ${toggleMenu ? "rotate-180" : ""}`}
+						viewBox="0 0 24 24">
+						<path
+							className="text-gray-300"
+							d="M19.586 11l-5-5L16 4.586 23.414 12 16 19.414 14.586 18l5-5H7v-2z"
+						/>
+						<path fill="currentColor" d="M3 23H1V1h2z" />
+					</svg>
+				</button>
 			</div>
 			<nav className="my-16">
 				<div>
-					<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
-						Menu
-					</h2>
+					{toggleMenu && (
+						<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+							Menu
+						</h2>
+					)}
 					<div className="mt-[10px]">
 						<Link
 							to="/"
@@ -37,7 +73,9 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-purple-700 font-bold">Home</span>
+							{toggleMenu && (
+								<span className="text-purple-700 font-bold">Home</span>
+							)}
 						</Link>
 						<Link
 							to="/browse"
@@ -53,9 +91,11 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Browse
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Browse
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/trending"
@@ -71,9 +111,11 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Trending
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Trending
+								</span>
+							)}
 						</Link>
 						<a
 							href="!#"
@@ -93,16 +135,20 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Following
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Following
+								</span>
+							)}
 						</a>
 					</div>
 				</div>
 				<div className="mt-8">
-					<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
-						Library
-					</h2>
+					{toggleMenu && (
+						<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+							Library
+						</h2>
+					)}
 					<div className="mt-[10px]">
 						<Link
 							to="/"
@@ -122,7 +168,7 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700">Recent</span>
+							{toggleMenu && <span className="text-zinc-700">Recent</span>}
 						</Link>
 						<Link
 							to="/browse"
@@ -142,9 +188,11 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Favourites
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Favourites
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/saved"
@@ -164,9 +212,11 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Saved
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Saved
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/my-videos"
@@ -182,16 +232,20 @@ function SidebarLg() {
 									/>
 								</svg>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Your videos
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Your videos
+								</span>
+							)}
 						</Link>
 					</div>
 				</div>
 				<div className="mt-8">
-					<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
-						Following
-					</h2>
+					{toggleMenu && (
+						<h2 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+							Following
+						</h2>
+					)}
 					<div className="mt-[10px]">
 						<Link
 							to="/"
@@ -203,9 +257,11 @@ function SidebarLg() {
 									alt="user1"
 								/>
 							</div>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								John Black
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									John Black
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/browse"
@@ -217,9 +273,11 @@ function SidebarLg() {
 									alt=""
 								/>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								James Cameroon
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									James Cameroon
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/saved"
@@ -231,9 +289,11 @@ function SidebarLg() {
 									alt=""
 								/>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Eleanor Pena
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Eleanor Pena
+								</span>
+							)}
 						</Link>
 						<Link
 							to="/my-videos"
@@ -245,30 +305,34 @@ function SidebarLg() {
 									alt="user1"
 								/>
 							</span>
-							<span className="text-zinc-700 text-sm tracking-wide font-normal">
-								Susan Weber
-							</span>
+							{toggleMenu && (
+								<span className="text-zinc-700 text-sm tracking-wide font-normal">
+									Susan Weber
+								</span>
+							)}
 						</Link>
 					</div>
 				</div>
 
 				{/* Banner */}
-				<div className="mt-28 px-6">
-					<div className="bg-gray-100 px-2 border border-gray-200 py-5 rounded-xl">
-						<h2 className="text-zinc-900 font-semibold text-sm text-center mb-1">
-							Get 3 months of premium service for free.
-						</h2>
-						<p className="text-xs text-center text-gray-500 font-light mb-3">
-							Take advantage of free and premium content and more.
-						</p>
-						<button className="px-7 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">
-							Get Premium
-						</button>
+				{toggleMenu && (
+					<div className="mt-28 px-6">
+						<div className="bg-gray-100 px-2 border border-gray-200 py-5 rounded-xl">
+							<h2 className="text-zinc-900 font-semibold text-sm text-center mb-1">
+								Get 3 months of premium service for free.
+							</h2>
+							<p className="text-xs text-center text-gray-500 font-light mb-3">
+								Take advantage of free and premium content and more.
+							</p>
+							<button className="px-7 py-3 bg-purple-100 text-purple-700 rounded-lg font-bold tracking-wide uppercase">
+								Get Premium
+							</button>
+						</div>
 					</div>
-				</div>
+				)}
 			</nav>
 		</div>
 	);
 }
 
-export default SidebarLg;
+export default Sidebar;

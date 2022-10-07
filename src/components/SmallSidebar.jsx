@@ -4,18 +4,7 @@ import { Link } from "react-router-dom";
 const SmallSidebar = () => {
 	return (
 		<div>
-			<div className="md:hidden h-screen w-[72px] bg-white border-r-2 border-gray-100 box-shadow overflow-y-scroll scrollbar-hide">
-				<div className="px-6 pt-8">
-					<svg
-						className="h-7 w-6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M22.685 10.965a2.557 2.557 0 0 1 0 4.47L3.945 26.05C2.192 27.044 0 25.802 0 23.816V2.584C0 .598 2.192-.644 3.945.35l18.74 10.615Z"
-							fill="#7B2CBF"
-						/>
-					</svg>
-				</div>
+			<div className="sm:hidden h-screen w-[72px] bg-white border-r-2 border-gray-100 box-shadow overflow-y-scroll scrollbar-hide">
 				<nav className="my-16">
 					<div>
 						<Link
